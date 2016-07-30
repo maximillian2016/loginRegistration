@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Login/Register?
+        </title>
+        <link type="text/stylesheet" rel="stylesheet" href="/app/static/maxstyles.css" >
+
+    </head>
+    <body>
+        <h1>Login Or Start Registration From Here!</h1>
+        <div>
+            <form id="reg_form" action="/process" name="process" value="register">
+                <input for="register">First name</input>
+                <input for="register">Last name</input>
+                <input for="register">Email</input>
+                <input for="register">Password</input>
+                <input for="register">Confirm Password</input>
+                <input for="register">Password Hint?</input>
+                <input type="submit" value="Submit Registration"></input>
+            </form>
+            <form id="Login_form" action="/process" name="process" value="login">
+                <input for="login">Email</input>
+                <input for "login">Password</input>
+                <input type="submit" value="Login"></input>
+            </form>
+        </div>
+    </body>
+</html>
