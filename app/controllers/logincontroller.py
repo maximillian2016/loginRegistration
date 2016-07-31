@@ -33,7 +33,6 @@ class logincontroller(Controller):
             'first':request.form['first'], 'last':request.form['last'],'email':request.form['email'],
             'password':request.form['password'], 'hint': request.form['hint']
         }
-        print pass_data
-        #self.models['LoginModel'].register_user(pass_data)
-        return self.load_view('/')
+        self.models['LoginModel'].register_user(pass_data)
+        return redirect('/')
 
