@@ -1,12 +1,86 @@
-body{
+body
+    {
     margin: auto;
     font-size:100%;
     font-family:verdana;
     }
 
-div{
+h1
+    {
+    margin:auto;
     }
 
-form input{
-            }
+div{
+    width:250px;
+    height:250px;
+    padding:60px;
+    border:10px solid black;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    }
+
+label
+    {
+    display:block;
+    }
+
+#yellow_btn
+    {
+    width:100px;
+    height:30px;
+    border-radius:5px;
+    font-family:cursive;
+    margin:5px;
+    }
+
+#green_btn
+    {
+    width:100px;
+    height:30px;
+    border-radius:5px;
+    font-family:cursive;
+    border:2px solid black;
+    margin:5px;
+    }
+
+label #email
+    {
+    margin-left:30px;
+    }
+
+label #password
+    {
+    margin-left:5px;
+    }
+
+form input
+    {
+    display:block;
+    }
+
+form{
+    font-family:cursive;
+    font-size:20px;
+    }
+
+.blank{
+    color:red;
+}
+.valid{
+    color:blue;
+    }
+
+.length{
+    color:purple;
+    }
+.match{
+    color:orange;
+    }
+.success{
+    color:green;
+    font-size:200%;
+    }
+
 

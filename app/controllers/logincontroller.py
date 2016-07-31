@@ -29,9 +29,9 @@ class logincontroller(Controller):
             return self.load_view('registration.htm')
 
     def register_user(self):
-        pass_data = {
+        pass_data ={
             'first':request.form['first'], 'last':request.form['last'],'email':request.form['email'],
-            'password':request.form['password'], 'hint': request.form['hint']
+            'password':request.form['password'], 'hint': request.form['hint'], 'confirm':request.form['confirm_password']
         }
         self.models['LoginModel'].register_user(pass_data)
         return redirect('/')
