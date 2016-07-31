@@ -1,28 +1,37 @@
 <!doctype html>
 <html>
     <head>
+        <meta name="description" content="Black Belt Login Page Norman M Smith" charset="UTF-8"></meta>
         <title>
             Login/Register?
         </title>
         <link type="text/stylesheet" rel="stylesheet" href="/app/static/maxstyles.css" >
-
     </head>
     <body>
-        <h1>Login Or Start Registration From Here!</h1>
+        <h1>Login Or Registration Form Here!</h1>
+        {%with messages = get_flashed_messages()%}
+                    {%if messages%}
+            {%for message in messages%}
+            <p>{{message}}</p>
+            {%endfor%}
+            {%endif%}
+            {%endwith%}
         <div>
-            <form id="reg_form" action="/process" name="process" value="register">
-                <input for="register">First name</input>
-                <input for="register">Last name</input>
-                <input for="register">Email</input>
-                <input for="register">Password</input>
-                <input for="register">Confirm Password</input>
-                <input for="register">Password Hint?</input>
-                <input type="submit" value="Submit Registration"></input>
+            <form action="/process" method="post">
+                <input type="hidden" name="action" value="register"></input>
+                <input type="submit" value="Sign Me Up!" style="background-color:yellow;"></input>
+                click here to register now!
+                <p>or.. login below if you already have an account!</p>
             </form>
-            <form id="Login_form" action="/process" name="process" value="login">
-                <input for="login">Email</input>
-                <input for "login">Password</input>
-                <input type="submit" value="Login"></input>
+            {{key}}
+            <form action="/process" method="POST" >
+                <input type="hidden" name="action" value="login"></input>
+                <label for="email">Email<input type="text" name="email" id="email"></label>
+                <label for="email">password<input type="text" name="password" id="password"></label>
+                <input type="submit" value="Sign Me In!" style="background-color:green; color:white;"></input>
+            </form>
+            <!--form action='/process' method='POST'>
+                <label for='name'>Name:<input type='text' name='name' id='name'></label-->
             </form>
         </div>
     </body>
