@@ -5,42 +5,31 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema LoginRegister
+-- Schema loginregister
 -- -----------------------------------------------------
--- changed name
--- 
 
 -- -----------------------------------------------------
--- Schema LoginRegister
---
--- changed name
--- 
+-- Schema loginregister
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `LoginRegister` DEFAULT CHARACTER SET utf8 ;
-USE `LoginRegister` ;
+CREATE SCHEMA IF NOT EXISTS `loginregister` DEFAULT CHARACTER SET utf8 ;
+USE `loginregister` ;
 
 -- -----------------------------------------------------
--- Table `LoginRegister`.`users`
+-- Table `loginregister`.`users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `LoginRegister`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `loginregister`.`users` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(255) NOT NULL,
   `last_name` VARCHAR(255) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `password` VARCHAR(8) NOT NULL,
   `hint` VARCHAR(255) NOT NULL,
-  `created_at` DATETIME NULL,
-  `updated_at` DATETIME NULL,
+  `created_at` DATETIME NULL DEFAULT NULL,
+  `updated_at` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `LoginRegister`.`table1`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `LoginRegister`.`table1` (
-)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+AUTO_INCREMENT = 34
+DEFAULT CHARACTER SET = utf8;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
